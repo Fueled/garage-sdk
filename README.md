@@ -64,7 +64,7 @@ You will find the instructions once logged into the Garage Dashboard: _Coming so
 
 ## License
 
-Copyright 2018 Fueled
+Copyright 2019 Fueled Digital Media, LLC
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. The License is available [here](https://github.com/Fueled/garage-sdk/blob/master/LICENSE). 
 
