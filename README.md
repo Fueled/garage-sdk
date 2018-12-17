@@ -1,13 +1,13 @@
 # Garage SDK
 
-Garage is a Swift Framework that helps product managers and the QA team to **track bugs** and **send them to Jira**.
+[Garage](https://garage.fueled.com) is a Swift Framework for iOS that allows you to log defects and collect feedback from inside your app directly to Jira in seconds. Explore more at [https://garage.fueled.com](https://garage.fueled.com) where you can register with Garage and connect to your own [Jira](https://www.atlassian.com/software/jira) account.
 
 ## Features
 
-- [x] Connect your Jira account
-- [x] Post Screenshot / Video bugs to Jira
-- [x] Draw, add title and description to your bugs for your developers
-- [x] Metadata information such as device, iOS version, type of network, etc. systematically attached
+- [x] Post screenshots and capture video sequences of your defects
+- [x] Draw directly to your screen to highlight areas of concern
+- [x] Annotate with a title and description before submitting to Jira
+- [x] Relevent information such as device model, iOS version, and network type are automatically attached
 
 ## Instructions
 
@@ -16,7 +16,7 @@ To report a bug on `iPad`, double tap with three fingers on the screen.
 
 ## Requirements
 
-- iOS 9.0+
+- iOS 10.0+
 - Xcode 9.3+
 - Swift 4.1+
 
@@ -24,49 +24,38 @@ To report a bug on `iPad`, double tap with three fingers on the screen.
 
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. 
+[CocoaPods](http://cocoapods.org) is a popular dependency manager for Cocoa projects and our recommended method for integrating the framework into your project. 
 
-**1/** To integrate **Garage** into your Xcode project, add the following line in your Podfile.
+**1.** To integrate **Garage** into your Xcode project, add the following line to your Podfile.
 
-```cocoapods
-pod 'Garage'
+```ruby
+pod 'Garage', '~> 1.0'
 ```
 
-**2/** In your terminal, run `pod install` or `pod update`.
+**2.** In your terminal, run `pod install` or `pod update`.
 
-**3/** Import the Garage Framework in your `AppDelegate`:
+**3.** Import the Garage framework in your `AppDelegate`:
 
 ```swift
 import Garage
 ```
 
-**4/** Configure and start the **Garage** shared manager in `application:didFinishLaunchingWithOptions:`:
+**4.** Configure and start the **Garage** shared manager in `application:didFinishLaunchingWithOptions:`:
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-	Garage.shared.configure(with: self.window)
+	Garage.shared.configure(clientId: "Your bundle ID", window: self.window)
 
 	return true
 }
 ```
 
-### Carthage
-
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. 
-
-_Coming soon..._
-
 ## Jira and Web Dashboard Setup
 
-In order to configure the **Jira integration**, you need to create a new Garage application and bind it to the appropriate board on our web interface.
-
-You will find the instructions once logged into the Garage Dashboard: _Coming soon..._
+In order to properly configure for use with **Jira**, you will need to log in to the [Garage Dashboard](https://garage.fueled.com) where you can create a new Garage application and bind it to a corresponding Jira board. This will ensure that the defects you log from the app are added as tickets to your project's backlog.
 
 ## License
 
 Copyright 2019 Fueled Digital Media, LLC
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. The License is available [here](https://github.com/Fueled/garage-sdk/blob/master/LICENSE). 
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, without warranties or donditions of any kind, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. The License is available [here](https://github.com/Fueled/garage-sdk/blob/master/LICENSE). Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" basis, without warranties or donditions of any kind, either express or implied. See the License for the specific language governing permissions and limitations under the License.
