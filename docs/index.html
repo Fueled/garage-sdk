@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Garage  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Garage  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Garage Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/Fueled/garage-sdk"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Garage Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Garage  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/BugInfo.html">BugInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BugInfo/ReportData.html">– ReportData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Garage.html">Garage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIWindow.html">UIWindow</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='garage-ios' class='heading'>Garage-ios</h1>
+
+<p><a href="https://www.bitrise.io/app/84b70b1d5e73bacb"><img src="https://www.bitrise.io/app/84b70b1d5e73bacb.svg?token=uVpJCGXblH95TZ3OH74qMQ&branch=develop" alt="Build Status"></a></p>
+<h3 id='project' class='heading'>Project</h3>
+
+<p>Garage is a Swift Framework that helps product managers and the QA team to track bugs and send them to Jira.</p>
+
+<p>Shake your device and Garage will appear. On iPad double tap with three finger on the screen.</p>
+<h3 id='requirements' class='heading'>Requirements</h3>
+
+<ul>
+<li>Swift 3+</li>
+<li>iOS 9.3+</li>
+<li>XCode 8+</li>
+<li>Your project needs to have the Keychain Sharing Enabled and you need to add <code>com.fueled</code> and <code>com.Fueled</code> to the list:</li>
+</ul>
+
+<p><img src="README_images/keychain.png" alt="keychain"></p>
+
+<ul>
+<li>Your project has to have as bundl Id : <code>com.Fueled</code>.XXX and be signed with a provisioning profile from the team.</li>
+</ul>
+
+<p>The last two points comes from the fact that the keychain is shared across all of our apps. If this requirement in not fulfilled the user will have to login again (And you don&rsquo;t want to mess with your Product Manager!!).</p>
+<h3 id='installation' class='heading'>Installation</h3>
+
+<p>You also need to ask your PM (or Paul) to provide a client id for the Snapshot and the Release configuration of your project. You will have to provide the bundle ID, JIRA name and configuration of your project.</p>
+<h5 id='cocoapods' class='heading'>Cocoapods</h5>
+
+<p>The recommended way to add Garage to your project is with Cocoapods. Add <code>pod &#39;Garage&#39;, :git =&gt; &#39;ssh://git@github.com/Fueled/garage-ios.git&#39;</code> line to your Podfile and proceed with running <code>pod install</code> afterwards.</p>
+
+<p>Please ensure that ssh is being used, as it&rsquo;s a requirement for our continuous integration setup.</p>
+<h5 id='carthage' class='heading'>Carthage</h5>
+
+<p>The recommended way to add Garage to your project is with Carthage. Add <code>github &quot;Fueled/Garage-ios&quot;</code> line to your Cartfile and proceed with your favorite way to update and integrate your Carthage dependencies.</p>
+
+<p>If submodules are being used for Carthage, please ensure that ssh is being used, as it&rsquo;s a requirement for our continuous integration setup.</p>
+<h3 id='example-project' class='heading'>Example Project</h3>
+
+<p>You will find examples of using Garage in the GarageExample project.</p>
+<h3 id='usage' class='heading'>Usage</h3>
+
+<p>Just call <code>Garage.shared.configure</code> in the AppDelegate in:</p>
+<pre class="highlight plaintext"><code>func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -&gt; Bool
+</code></pre>
+
+<p>You may call it like so:</p>
+<pre class="highlight plaintext"><code>Garage.shared.configure(clientId: &lt;ClientID&gt;, window: self.window)
+</code></pre>
+
+<p>Where <code>ClientID</code> is the client id for the configuration for the current project.</p>
+<h3 id='releasing' class='heading'>Releasing</h3>
+
+<p>To release a new version of <code><a href="Classes/Garage.html">Garage</a></code>, make sure you have been added as a <code>Developer</code> to the bitrise project, and have a build trigger token for the project. You may then run the following command:</p>
+<pre class="highlight shell"><code>curl https://app.bitrise.io/app/84b70b1d5e73bacb/build/start.json <span class="nt">--data</span> <span class="s1">'{"hook_info":{"type":"bitrise","build_trigger_token":"&lt;build trigger token&gt;"},"build_params":{"branch":"develop","environments":[{"mapped_to":"PUBLIC_VERSION_NUMBER","value":"&lt;version number&gt;","is_expand":true}]},"triggered_by":"curl"}'</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2019 Fueled. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
