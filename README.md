@@ -1,5 +1,7 @@
 # Garage SDK
 
+[![Documentation](https://fueled.github.io/garage-sdk/badge.svg)](https://fueled.github.io/garage-sdk/)
+
 [Garage](https://garage.fueled.com) is a Swift Framework for iOS that allows you to log defects and collect feedback from inside your app directly to Jira in seconds. Explore more at [https://garage.fueled.com](https://garage.fueled.com) where you can register with Garage and connect to your own [Jira](https://www.atlassian.com/software/jira) account.
 
 ## Features
@@ -13,6 +15,10 @@
 
 To report a bug on `iPhone`, shake your device and Garage will appear. 
 To report a bug on `iPad`, double tap with three fingers on the screen.
+
+## Documentation
+
+The documentation for project is available [here](https://fueled.github.io/garage-sdk/).
 
 ## Requirements
 
@@ -49,6 +55,19 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 	return true
 }
 ```
+
+You can optionally specify a closure as the last argument to `configure`, allowing to customize what's sent to Jira. For example:
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+	Garage.shared.configure(clientId: "Your bundle ID", window: self.window) {
+		$0.customPayload["environment"] = "dev"
+	}
+
+	return true
+}
+```
+
+Please to the documentation for [`BugInfo`](https://fueled.github.io/garage-sdk/Classes/BugInfo.html) for more information.
 
 ## Jira and Web Dashboard Setup
 
