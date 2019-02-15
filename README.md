@@ -1,5 +1,7 @@
 # Garage SDK
 
+![Header](README_images/Header.png)
+
 [![Documentation](https://fueled.github.io/garage-sdk/badge.svg)](https://fueled.github.io/garage-sdk/)
 
 [Garage](https://garage.fueled.com) is a Swift Framework for iOS that allows you to log defects and collect feedback from inside your app directly to Jira in seconds. Explore more at [https://garage.fueled.com](https://garage.fueled.com) where you can register with Garage and connect to your own [Jira](https://www.atlassian.com/software/jira) account.
