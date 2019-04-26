@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Garage Class Reference</title>
+    <title>Error Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/Garage" class="dashAnchor"></a>
-    <a title="Garage Class Reference"></a>
+    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+    <a title="Error Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Garage Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Garage Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Garage Class Reference
+        Error Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -80,15 +80,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Garage</h1>
+            <h1>Error</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Garage</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
 
                 </div>
               </div>
-            <p>The main class used to setup Garage in your project.
-It is a singleton that can be accessed through the <code>shared</code> instance variable.</p>
+            <p>Represents an error that can be emitted by the Garage SDK.</p>
 
           </section>
           <section class="section task-group-section">
@@ -97,9 +96,9 @@ It is a singleton that can be accessed through the <code>shared</code> instance 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6GarageAAC6sharedABvpZ"></a>
-                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6GarageAAC6sharedABvpZ">shared</a>
+                    <a name="/s:6Garage5ErrorO014VideoRecordingB6ReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/VideoRecordingErrorReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO014VideoRecordingB6ReasonO">VideoRecordingErrorReason</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -107,14 +106,15 @@ It is a singleton that can be accessed through the <code>shared</code> instance 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>shared</code> instance of the <code>Garage</code> singleton.</p>
+                        <p>Represents the various reasons a video recording error would be reported.</p>
 
+                        <a href="../Enums/Error/VideoRecordingErrorReason.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">Garage</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">VideoRecordingErrorReason</span></code></pre>
 
                         </div>
                       </div>
@@ -124,9 +124,9 @@ It is a singleton that can be accessed through the <code>shared</code> instance 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6GarageAAC16bundleIdentifierSSvp"></a>
-                    <a name="//apple_ref/swift/Property/bundleIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6GarageAAC16bundleIdentifierSSvp">bundleIdentifier</a>
+                    <a name="/s:6Garage5ErrorO20AuthenticationReasonO"></a>
+                    <a name="//apple_ref/swift/Enum/AuthenticationReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO20AuthenticationReasonO">AuthenticationReason</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -134,15 +134,15 @@ It is a singleton that can be accessed through the <code>shared</code> instance 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The bundle identifier Garage is currently configured with.
-Empty if <code>configure(with:, window:, willSendDefect:)</code> has not been called yet.</p>
+                        <p>Represents the various reasons the authentication call might fail.</p>
 
+                        <a href="../Enums/Error/AuthenticationReason.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">bundleIdentifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AuthenticationReason</span></code></pre>
 
                         </div>
                       </div>
@@ -152,9 +152,9 @@ Empty if <code>configure(with:, window:, willSendDefect:)</code> has not been ca
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6GarageAAC14willSendDefectyAA0D4InfoCcSgvp"></a>
-                    <a name="//apple_ref/swift/Property/willSendDefect" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6GarageAAC14willSendDefectyAA0D4InfoCcSgvp">willSendDefect</a>
+                    <a name="/s:6Garage5ErrorO14authenticationyA2C20AuthenticationReasonOcACmF"></a>
+                    <a name="//apple_ref/swift/Element/authentication(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO14authenticationyA2C20AuthenticationReasonOcACmF">authentication(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,17 +162,14 @@ Empty if <code>configure(with:, window:, willSendDefect:)</code> has not been ca
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This closure is called right before a bug is about to be added to the Jira board.
-The bug properties can be inspected and the <code><a href="../Classes/DefectInfo.html#/s:6Garage10DefectInfoC13customPayloadSDySSypGvp">DefectInfo.customPayload</a></code> property
-can be modified to suit your needs.
-Please refer to the documentation for <code><a href="../Classes/DefectInfo.html">DefectInfo</a></code> for more info.</p>
+                        <p>When any authentication related error happens</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">willSendDefect</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/DefectInfo.html">DefectInfo</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">authentication</span><span class="p">(</span><span class="kt"><a href="../Enums/Error/AuthenticationReason.html">AuthenticationReason</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -182,9 +179,9 @@ Please refer to the documentation for <code><a href="../Classes/DefectInfo.html"
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6GarageAAC9configure8clientId6window14willSendDefectySS_So8UIWindowCSgyAA0H4InfoCcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/configure(clientId:window:willSendDefect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6GarageAAC9configure8clientId6window14willSendDefectySS_So8UIWindowCSgyAA0H4InfoCcSgtF">configure(clientId:window:willSendDefect:)</a>
+                    <a name="/s:6Garage5ErrorO07presentA14OnScreenFailedyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/presentGarageOnScreenFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO07presentA14OnScreenFailedyA2CmF">presentGarageOnScreenFailed</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -192,17 +189,16 @@ Please refer to the documentation for <code><a href="../Classes/DefectInfo.html"
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><strong>Deprecated</strong>: Please use <code>configure(bundleIdentifier:, window:, willSendDefect:)</code> instead.</p>
-
-<p>Refer to the documentation for <code>configure(bundleIdentifier:, window:, willSendDefect:)</code> for more info.</p>
+                        <p>Failed to present a Garage view controller. This can occur if Garage fails to retrieve the top
+most view controller of the application, for example if the host application has created a custom
+UIWindow, made it key, and if that window does not have any root view controller.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "configure(bundleIdentifier:window:willSendDefect:﹚")</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">clientId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">window</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">willSendDefect</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/DefectInfo.html">DefectInfo</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">presentGarageOnScreenFailed</span></code></pre>
 
                         </div>
                       </div>
@@ -212,9 +208,9 @@ Please refer to the documentation for <code><a href="../Classes/DefectInfo.html"
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6GarageAAC9configure16bundleIdentifier6window14willSendDefectySS_So8UIWindowCSgyAA0H4InfoCcSgtF"></a>
-                    <a name="//apple_ref/swift/Method/configure(bundleIdentifier:window:willSendDefect:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6GarageAAC9configure16bundleIdentifier6window14willSendDefectySS_So8UIWindowCSgyAA0H4InfoCcSgtF">configure(bundleIdentifier:window:willSendDefect:)</a>
+                    <a name="/s:6Garage5ErrorO07parsingB0yACsAB_pSgcACmF"></a>
+                    <a name="//apple_ref/swift/Element/parsingError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO07parsingB0yACsAB_pSgcACmF">parsingError(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -222,55 +218,16 @@ Please refer to the documentation for <code><a href="../Classes/DefectInfo.html"
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Configure Garage.</p>
-
-<p>Garage will support all of the following:</p>
-
-<ul>
-<li>Shake on iphone</li>
-<li>Double tap with three finder on ipad</li>
-<li><p>Orientation changes</p></li>
-</ul>
+                        <p>Failed to parse data response from Garage server.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">bundleIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">window</span><span class="p">:</span> <span class="kt">UIWindow</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">willSendDefect</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/DefectInfo.html">DefectInfo</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">parsingError</span><span class="p">(</span><span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">?)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>window</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The main window of your application. Required for ipad application to support double tap with three fingers.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>willSendDefect</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The closure executed before a bug is sent to the Jira board. Please see the documentation for <code><a href="../Classes/Garage.html#/s:6GarageAAC14willSendDefectyAA0D4InfoCcSgvp">Garage.willSendDefect</a></code> for more info.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -278,9 +235,9 @@ Please refer to the documentation for <code><a href="../Classes/DefectInfo.html"
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6GarageAAC6logoutyyF"></a>
-                    <a name="//apple_ref/swift/Method/logout()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6GarageAAC6logoutyyF">logout()</a>
+                    <a name="/s:6Garage5ErrorO14videoRecordingyA2C05VideodB6ReasonOcACmF"></a>
+                    <a name="//apple_ref/swift/Element/videoRecording(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO14videoRecordingyA2C05VideodB6ReasonOcACmF">videoRecording(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -288,14 +245,74 @@ Please refer to the documentation for <code><a href="../Classes/DefectInfo.html"
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Clear user data from Keychain</p>
+                        <p>Garage reported an error while doing a video recording related operation.
+You will find more information by inspecting its <code><a href="../Enums/Error/VideoRecordingErrorReason.html">VideoRecordingErrorReason</a></code> associated value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logout</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">videoRecording</span><span class="p">(</span><span class="kt"><a href="../Enums/Error/VideoRecordingErrorReason.html">VideoRecordingErrorReason</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Garage5ErrorO6serveryAcA06ServerB0VSgcACmF"></a>
+                    <a name="//apple_ref/swift/Element/server(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO6serveryAcA06ServerB0VSgcACmF">server(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Server returned error to a request, the associated value contains all details of the error,
+if nil it will default to the default server error description</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">server</span><span class="p">(</span><span class="kt"><a href="../Structs/ServerError.html">ServerError</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Garage5ErrorO16errorDescriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/errorDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage5ErrorO16errorDescriptionSSSgvp">errorDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provide helpful error description. The text copies are intentionnally slightly technical.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

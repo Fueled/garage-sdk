@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Classes  Reference</title>
+    <title>Type Aliases  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Section/Classes" class="dashAnchor"></a>
-    <a title="Classes  Reference"></a>
+    <a name="//apple_ref/swift/Section/Type Aliases" class="dashAnchor"></a>
+    <a title="Type Aliases  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">Garage Docs</a> (100% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="index.html">Garage Reference</a>
         <img id="carat" src="img/carat.png" />
-        Classes  Reference
+        Type Aliases  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -80,8 +80,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Classes</h1>
-            <p>The following classes are available globally.</p>
+            <h1>Type Aliases</h1>
+            <p>The following type aliases are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -90,9 +90,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6GarageAAC"></a>
-                    <a name="//apple_ref/swift/Class/Garage" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6GarageAAC">Garage</a>
+                    <a name="/s:6Garage7BugInfoa"></a>
+                    <a name="//apple_ref/swift/Alias/BugInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Garage7BugInfoa">BugInfo</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -100,48 +100,17 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The main class used to setup Garage in your project.
-It is a singleton that can be accessed through the <code>shared</code> instance variable.</p>
+                        <p><strong>Deprecated</strong>: Please use <code><a href="Classes/DefectInfo.html">DefectInfo</a></code> instead.</p>
 
-                        <a href="Classes/Garage.html" class="slightly-smaller">See more</a>
+<p>Refer to the documentation for <code><a href="Classes/DefectInfo.html">DefectInfo</a></code> for more info.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Garage</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Garage10DefectInfoC"></a>
-                    <a name="//apple_ref/swift/Class/DefectInfo" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Garage10DefectInfoC">DefectInfo</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Represents a bug about to be sent to Jira.</p>
-
-                        <a href="Classes/DefectInfo.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DefectInfo</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "DefectInfo")</span>
+<span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">BugInfo</span> <span class="o">=</span> <span class="kt"><a href="Classes/DefectInfo.html">DefectInfo</a></span></code></pre>
 
                         </div>
                       </div>
